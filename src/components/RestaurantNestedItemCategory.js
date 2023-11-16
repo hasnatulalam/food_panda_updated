@@ -22,13 +22,13 @@ return(
   {isVisible && (
     <div>
       {nestedCategory.categories.map((category, index) => (
-        <div key={index}>
-          <RestaurantItemCategory itemCategory={category} />
+        <div key={category?.card?.info?.id}>
+          <RestaurantItemCategory key={category?.card?.info?.id} itemCategory={category} />
         </div>
       ))}
     </div>
   )}
 </div>
 )
-}
+} 
 export default RestaurantNestedItemCategory;

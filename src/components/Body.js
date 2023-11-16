@@ -75,7 +75,7 @@ const Body=()=>{
       <div className="grid grid-cols-4 gap-1">
          
          
-      {filteredRestaurant.map((restaurant)=>(
+      {filteredRestaurant?.map((restaurant)=>(
         <Link key={restaurant?.info?.id}  to={"/restaurants/"+restaurant?.info?.id}> <RestaurantCard resData={restaurant}/> </Link>
 
       ))}
